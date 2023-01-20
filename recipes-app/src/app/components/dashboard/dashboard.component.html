@@ -1,0 +1,46 @@
+
+<div class="container mt-5 px-4">
+    <div class="row">
+        <h1>Últma receta</h1>
+        <hr>
+    </div>
+    <div class="row" id="lastRecipe" >
+        <div class="col mb-4" id="lastImg" >
+            <img [src]="lastRecipe.picture"  alt="" width="100%" >
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <h1>{{lastRecipe.title}}</h1>
+            <p class="descripcion mt-3">{{lastRecipe.description}}</p>
+            <button class="btn btn-primary mt-3" id="btnView" (click)="viewDetails(lastRecipe)">Ver detalles</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="container  mt-5 px-4" id="otherRecipes" >
+    <hr>
+    
+    <form class="row">
+        <div class="col-sm-12 col-md-4 mt-3">
+            <input class="form-control" type="text" name="search" id="search" (keyup)="filterRecipes($event)"
+                placeholder="Buscar Recetas">
+        </div>
+    </form>
+
+    <div class="row mt-3" >
+        <div class="col-sm-12 col-lg-6 col-xl-4 p-1 mb-3 d-flex justify-content-center" *ngFor="let recipe of recipesToShow">
+            <div class="polaroid" (click)="viewDetails(recipe)">
+                <img [src]="recipe.picture" [alt]="recipe.title" width="100%" height="250px">
+                <div class="imgTitle">
+                    <h3>{{recipe.title}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+  
+  

@@ -1,0 +1,34 @@
+<div class="container-fluid mt-5" id="main">
+
+    <form class="row g-3" [formGroup]="recipeForm" (ngSubmit)="saveRecipe()">
+
+        <div class="col-12">
+            <label class="form-label" for="title">Título:</label>
+            <input class="form-control" type="text" name="title" id="title" placeholder="Escribe el título" formControlName="title">
+        </div>        
+
+        <div class="col-12">
+            <label class="form-label" for="description">Descripción:</label>
+            <textarea class="form-control" name="description" id="description" cols="30" rows="5"
+                placeholder="Describe la receta" formControlName="description"></textarea>
+        </div>       
+
+        <div class="col-12">
+
+            <label class="form-label" for="ingredients">Ingredientes:</label>
+            <textarea class="form-control" name="ingredients" id="ingredients" cols="30" rows="5"
+                placeholder="Ingresa un ingrediente por línea" formControlName="ingredients"></textarea>
+
+        </div>
+
+        <div class="col-6">
+            <label class="form-label" for="picture">Imagen:</label>
+            <input class="form-control" type="file" name="picture" id="picture" accept=".PNG, .JPG" formControlName="picture" (change)="imageChanged($event)">
+            <input class="form-control mt-3 mb-3" [disabled]="!recipeForm.valid" type="submit" id="save" value="Guardar">
+        </div>
+
+        <div class="col-6 mt-3 mb-3">
+            <img *ngIf="imgSRC" [src]="imgSRC" [alt]="imgAlt" width="50%">
+        </div>
+    </form>
+</div>

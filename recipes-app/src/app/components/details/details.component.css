@@ -1,0 +1,22 @@
+.done{
+    text-decoration: line-through;
+}
+.undone{
+    text-decoration: solid;
+}
+
+#recipeImg {
+    text-align: center;
+}
+
+#recipeImg .col img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr {
+    border: #13005A 3px solid;
+}
+
+.descripcion{
+    text-align: justify;
+}

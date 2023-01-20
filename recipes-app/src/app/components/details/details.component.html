@@ -1,0 +1,22 @@
+<div *ngIf="selectedRecipe" class="container mt-5">
+    <div class="row" id="recipeImg">
+        <div class="col">
+            <img [src]="selectedRecipe.picture || ''" id="ltsImg" alt="" width="50%" >
+        </div>
+        <hr class="mt-5">
+    </div>
+    <div class="row ">
+        <div class="col">
+            <h1>{{selectedRecipe.title}}</h1>
+            <p class="descripcion">{{selectedRecipe.description}}</p>
+            <div class="row mt-3" *ngFor="let ingredient of selectedRecipe.ingredients, index as i">
+                <div class="col mb-2" [ngClass]="{'done': ingredient.done, 'undone': !ingredient.done}">
+                    <input type="checkbox" name={{selectedRecipe.title}} id={{ingredient.name}}
+                        (change)="changeStatus(ingredient)">
+                    <p style="display: inline;"> {{ingredient.name}}</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-3 mb-5" routerLink="/dashboard" >Volver</button>
+    </div>
+</div>

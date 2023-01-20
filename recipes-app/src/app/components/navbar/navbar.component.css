@@ -1,0 +1,17 @@
+.selected{
+    background-color:#E3F6FF;
+    color: darkblue
+}
+.navbar-toggler{
+    background-color: #8ab5cc;
+    border: 0px;
+}
+
+.navb{
+    background-color: #0081C9;
+    
+}
+a{
+    color: white;
+    font-weight: 200;
+}

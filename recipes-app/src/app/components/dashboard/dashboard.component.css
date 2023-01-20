@@ -1,0 +1,26 @@
+div.polaroid {
+    text-align: center;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.imgTitle {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px;
+}
+
+
+hr {
+    border: #13005A 3px solid;
+}
+
+#lastImg img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.descripcion{
+    text-align: justify;
+}
